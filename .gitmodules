@@ -1,0 +1,4 @@
+[submodule "azure-digital-twins/ontology"]
+	path = azure-digital-twins/ontology
+	url = git@github.com:AlberiSantos/ManufacturingOntologies.git
+	branch = custom/scenario-integration
