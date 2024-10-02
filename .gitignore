@@ -1,0 +1,11 @@
+# Ignorar arquivos de compilação e específicos de máquina
+*.opt
+*.bootinfo
+*.bootinfo_guids
+*.compileinfo
+
+# Ignorar arquivos de projeto recuperados
+*RECOVERED_*.project
+
+# Ignorar backups temporários
+*~ 

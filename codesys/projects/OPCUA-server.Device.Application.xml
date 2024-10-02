@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.11.0</Version>
+    <SymbolConfigObject version="3.5.11.10" runtimeid="3.5.11.30" libversion="3.5.11.0" compiler="3.5.11.30" lmm="3.5.11.30" profile="XSOFT-CODESYS V3.5.11+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="OPCUA-server" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_LREAL" size="8" swapsize="8" typeclass="LReal" iecname="LREAL" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeUserDef name="T_CTU" size="8" nativesize="16" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="CTU">
+      <UserDefElement iecname="CU" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="RESET" type="T_BOOL" byteoffset="1" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PV" type="T_WORD" byteoffset="2" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="4" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="CV" type="T_WORD" byteoffset="6" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hours_Counter" size="10" nativesize="16" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="Hours_Counter">
+      <UserDefElement iecname="Entrada" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Pulso_Segundo" type="T_BOOL" byteoffset="1" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Reset" type="T_BOOL" byteoffset="2" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Segundos" type="T_INT" byteoffset="4" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Minutos" type="T_INT" byteoffset="6" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Horas" type="T_INT" byteoffset="8" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_R_TRIG" size="2" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="R_TRIG">
+      <UserDefElement iecname="CLK" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="1" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="16" nativesize="28" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TON">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="PLC_PRG">
+        <Node name="Buffer_Conveyor" type="T_LREAL" access="ReadWrite" />
+        <Node name="Buffer_Entry" type="T_WORD" access="ReadWrite" />
+        <Node name="Buffer_Exit" type="T_WORD" access="ReadWrite" />
+        <Node name="Ciclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="Clock" type="T_TIME" access="ReadWrite" />
+        <Node name="Corrente_M1" type="T_INT" access="ReadWrite" />
+        <Node name="Corrente_M2" type="T_INT" access="ReadWrite" />
+        <Node name="Exit_Conveyor" type="T_LREAL" access="ReadWrite" />
+        <Node name="Exit_var" type="T_WORD" access="ReadWrite" />
+        <Node name="Hours" type="T_INT" access="ReadWrite" />
+        <Node name="Hours_Counter_0" type="T_Hours_Counter" access="ReadWrite" />
+        <Node name="IEC_Counter_0_DB" type="T_CTU" access="ReadWrite" />
+        <Node name="IEC_Counter_0_DB_1" type="T_CTU" access="ReadWrite" />
+        <Node name="IEC_Counter_0_DB_2" type="T_CTU" access="ReadWrite" />
+        <Node name="Minutes" type="T_INT" access="ReadWrite" />
+        <Node name="motor1_alert" type="T_BOOL" access="ReadWrite" />
+        <Node name="oscilador" type="T_BOOL" access="ReadWrite" />
+        <Node name="R_TRIG_0" type="T_R_TRIG" access="ReadWrite" />
+        <Node name="Read_M1" type="T_BOOL" access="ReadWrite" />
+        <Node name="Reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="Reset_Counter" type="T_BOOL" access="ReadWrite" />
+        <Node name="RPM_M1" type="T_INT" access="ReadWrite" />
+        <Node name="RPM_M2" type="T_INT" access="ReadWrite" />
+        <Node name="S_Buffer_Entry" type="T_BOOL" access="ReadWrite" />
+        <Node name="S_Buffer_Exit" type="T_BOOL" access="ReadWrite" />
+        <Node name="S_Exit" type="T_BOOL" access="ReadWrite" />
+        <Node name="Sec" type="T_INT" access="ReadWrite" />
+        <Node name="Start" type="T_BOOL" access="ReadWrite" />
+        <Node name="Stop" type="T_BOOL" access="ReadWrite" />
+        <Node name="Stop_Blade" type="T_BOOL" access="ReadWrite" />
+        <Node name="TON_0" type="T_TON" access="ReadWrite" />
+        <Node name="TON_1" type="T_TON" access="ReadWrite" />
+        <Node name="val" type="T_UINT" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
