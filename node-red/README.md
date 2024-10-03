@@ -92,3 +92,9 @@ Para acessar o painel de controle do **Node-RED**:
    ```
    http://localhost:1880/ui
    ```
+
+## Links de Apoio
+
+- [Node-RED - Site Oficial](https://nodered.org/)
+- [AWS IoT - Documentação](https://aws.amazon.com/iot/)
+- [Azure IoT Hub - Documentação](https://docs.microsoft.com/en-us/azure/iot-hub/)
