@@ -90,7 +90,7 @@ def analyze_wireshark_data(file_path, port):
 
     # Gráfico I/O - Número de Pacotes por Intervalo de Tempo
     df.set_index('Time', inplace=True)
-    packet_count_per_second = df.resample('1S').size()
+    packet_count_per_second = df.resample('1s').size()
 
     plt.figure(figsize=(10, 6))
     plt.plot(packet_count_per_second.index, packet_count_per_second.values, marker='o', linestyle='-', color='blue')
@@ -101,7 +101,7 @@ def analyze_wireshark_data(file_path, port):
     plt.show()
 
     # Gráfico I/O - Taxa de Bytes por Intervalo de Tempo
-    byte_count_per_second = df['Length'].resample('1S').sum()
+    byte_count_per_second = df['Length'].resample('1s').sum()
 
     plt.figure(figsize=(10, 6))
     plt.plot(byte_count_per_second.index, byte_count_per_second.values, marker='o', linestyle='-', color='orange')

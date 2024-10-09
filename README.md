@@ -44,13 +44,13 @@ Fluxo implementado no Node-RED:
 
 6. **Segurança e Publicação na Nuvem**: Os dados capturados dos dispositivos foram publicados de forma segura na nuvem via **MQTT** com suporte a criptografia TLS. As mensagens de dados foram roteadas para o **AWS IoT** para armazenamento e análise, enquanto os gêmeos digitais foram atualizados no **Azure Digital Twins**.
 
-7. **Monitoramento e Controle em Tempo Real**: O dashboard do **Node-RED** permitiu o controle remoto dos dispositivos, exibindo dados operacionais como contagem de produtos, status dos motores e logs de eventos críticos. A interface possibilitou o controle direto dos dispositivos simulados, como iniciar/parar as esteiras e ajustar parâmetros operacionais. Mais detalhes podem ser encontrados na documentação do módulo utility [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/utility/README.md).
+7. **Monitoramento e Controle em Tempo Real**: O dashboard do **Node-RED** permitiu o controle remoto dos dispositivos, exibindo dados operacionais como contagem de produtos, status dos motores e logs de eventos críticos. A interface possibilitou o controle direto dos dispositivos simulados, como iniciar/parar as esteiras e ajustar parâmetros operacionais.
 
 Dashboard implementado utilizando o Node-RED:
 
 ![Dashboard Node-RED](images/dashboard_1.png)
 
-8. **Validação da Arquitetura**: Utilizando a ferramenta **Wireshark** foram realizados testes de desempenho, incluindo a medição de **latência** e **throughput** para garantir a eficiência e confiabilidade da solução em um ambiente industrial simulado. As capturas foram realizadas nos pontos indicados na imagem abaixo.
+8. **Validação da Arquitetura**: Utilizando a ferramenta **Wireshark** foram realizados testes de desempenho, incluindo a medição de **latência** e **throughput** para garantir a eficiência e confiabilidade da solução em um ambiente industrial simulado. As capturas foram realizadas nos pontos indicados na imagem abaixo. Mais detalhes podem ser encontrados na documentação do módulo utility [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/utility/README.md).
 
 Pontos de captura de comunicação com a ferramenta wireshark:
 
