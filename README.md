@@ -24,7 +24,7 @@ Demonstrar a interconexão e integração de dispositivos industriais com sistem
 
 Cena "Buffer Station":
 
-![Cena "Buffer Station"](images/factory-io.png)
+![Cena "Buffer Station"](images/factory_io.png)
    
 2. **Comunicação via OPC UA**: Configuração de um servidor OPC UA no **CODESYS** para permitir a comunicação segura e padronizada entre o CLP virtual e o ambiente simulado. A comunicação foi protegida por criptografia TLS. Mais detalhes podem ser encontrados na documentação do módulo **CODESYS** [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/codesys/README.md).
 
@@ -32,7 +32,7 @@ Cena "Buffer Station":
 
 Gráfico de relações dos gêmeos digitais:
 
-![Gráfico Gêmeos Digitais](images/azure-gemeo-digital.png)
+![Gráfico Gêmeos Digitais](images/azure_gemeo_digital.png)
 
 4. **Orquestração com Node-RED**: O **Node-RED** foi utilizado para integrar os diferentes dispositivos e sistemas, como o CLP e sensores, e para conectar o sistema à nuvem AWS via **MQTT**. O **Node-RED** também facilitou a criação de dashboards interativos para monitoramento em tempo real. Mais detalhes podem ser encontrados na documentação do módulo Node-RED [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/node-red/README.md).
 
