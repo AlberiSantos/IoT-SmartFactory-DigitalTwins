@@ -2,6 +2,8 @@
 
 ## Caso de Uso: Integração Completa de Gêmeos Digitais e Interoperabilidade entre Dispositivos em um Ambiente Simulado de Indústria 4.0
 
+![Arquitetura do Projeto](images/arquitetura.png)
+
 ### Resumo
 Este caso de uso descreve a integração de dispositivos industriais simulados com sistemas de controle e plataformas de nuvem, utilizando protocolos de comunicação como OPC UA, MQTT, e Modbus, em conjunto com o framework Node-RED. A solução proposta também incorpora o uso de gêmeos digitais baseados na ontologia ISA-95, para criar uma representação virtual dos dispositivos físicos. O objetivo é validar a eficiência da arquitetura desenvolvida em um cenário simulado de Indústria 4.0, com foco em monitoramento, controle em tempo real e interoperabilidade.
 
