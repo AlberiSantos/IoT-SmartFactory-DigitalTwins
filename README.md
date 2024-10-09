@@ -36,15 +36,19 @@ Gráfico de relações dos gêmeos digitais:
 
 4. **Orquestração com Node-RED**: O **Node-RED** foi utilizado para integrar os diferentes dispositivos e sistemas, como o CLP e sensores, e para conectar o sistema à nuvem AWS via **MQTT**. O **Node-RED** também facilitou a criação de dashboards interativos para monitoramento em tempo real. Mais detalhes podem ser encontrados na documentação do módulo Node-RED [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/node-red/README.md).
 
-Dashboard implementado utilizando o Node-RED:
+Fluxo implementado no Node-RED:
 
-![Dashboard Node-RED](images/dashboard_1.png)
+![Fluxo Node-RED](images/fluxo_mc1.png)
 
 5. **Interoperabilidade de Protocolos**: A solução foi projetada para suportar múltiplos protocolos de comunicação, incluindo **Modbus** e **MQTT**, demonstrando a interoperabilidade do sistema ao conectar dispositivos legados com plataformas modernas, como o **Azure IoT Hub**.
 
 6. **Segurança e Publicação na Nuvem**: Os dados capturados dos dispositivos foram publicados de forma segura na nuvem via **MQTT** com suporte a criptografia TLS. As mensagens de dados foram roteadas para o **AWS IoT** para armazenamento e análise, enquanto os gêmeos digitais foram atualizados no **Azure Digital Twins**.
 
 7. **Monitoramento e Controle em Tempo Real**: O dashboard do **Node-RED** permitiu o controle remoto dos dispositivos, exibindo dados operacionais como contagem de produtos, status dos motores e logs de eventos críticos. A interface possibilitou o controle direto dos dispositivos simulados, como iniciar/parar as esteiras e ajustar parâmetros operacionais.
+
+Dashboard implementado utilizando o Node-RED:
+
+![Dashboard Node-RED](images/dashboard_1.png)
 
 8. **Validação da Arquitetura**: Foram realizados testes de desempenho, incluindo a medição de **latência** e **throughput** para garantir a eficiência e confiabilidade da solução em um ambiente industrial simulado. As métricas coletadas foram essenciais para validar a comunicação entre dispositivos e nuvem.
 
