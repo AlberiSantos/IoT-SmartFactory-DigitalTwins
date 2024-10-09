@@ -21,12 +21,24 @@ Demonstrar a interconexão e integração de dispositivos industriais com sistem
 
 ### Descrição do Processo
 1. **Simulação Industrial**: Utilização do **Factory I/O** para simular um ambiente industrial que inclui esteiras, sensores de proximidade, motores e sistemas de controle. A cena "Buffer Station" foi usada para representar um processo de produção. Mais detalhes podem ser encontrados na documentação sobre o Factory I/O [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/factoryio.md).
+
+Cena "Buffer Station":
+
+![Cena "Buffer Station"](images/factory-io.png)
    
 2. **Comunicação via OPC UA**: Configuração de um servidor OPC UA no **CODESYS** para permitir a comunicação segura e padronizada entre o CLP virtual e o ambiente simulado. A comunicação foi protegida por criptografia TLS. Mais detalhes podem ser encontrados na documentação do módulo **CODESYS** [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/codesys/README.md).
 
 3. **Integração com Gêmeos Digitais**: Representação virtual dos dispositivos físicos por meio de **gêmeos digitais** utilizando a **DTDL** (Digital Twin Definition Language) no **Azure Digital Twins**, com base na ontologia **ISA-95**, para otimizar o mapeamento e a visualização dos recursos industriais. Mais detalhes podem ser encontrados na documentação do módulo azure-digital-twins [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/azure-digital-twins/README.md).
 
+Gráfico de relações dos gêmeos digitais:
+
+![Gráfico Gêmeos Digitais](images/azure-gemeo-digital.png)
+
 4. **Orquestração com Node-RED**: O **Node-RED** foi utilizado para integrar os diferentes dispositivos e sistemas, como o CLP e sensores, e para conectar o sistema à nuvem AWS via **MQTT**. O **Node-RED** também facilitou a criação de dashboards interativos para monitoramento em tempo real. Mais detalhes podem ser encontrados na documentação do módulo Node-RED [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/node-red/README.md).
+
+Dashboard implementado utilizando o Node-RED:
+
+![Dashboard Node-RED](images/dashboard_1.png)
 
 5. **Interoperabilidade de Protocolos**: A solução foi projetada para suportar múltiplos protocolos de comunicação, incluindo **Modbus** e **MQTT**, demonstrando a interoperabilidade do sistema ao conectar dispositivos legados com plataformas modernas, como o **Azure IoT Hub**.
 
