@@ -44,13 +44,17 @@ Fluxo implementado no Node-RED:
 
 6. **Segurança e Publicação na Nuvem**: Os dados capturados dos dispositivos foram publicados de forma segura na nuvem via **MQTT** com suporte a criptografia TLS. As mensagens de dados foram roteadas para o **AWS IoT** para armazenamento e análise, enquanto os gêmeos digitais foram atualizados no **Azure Digital Twins**.
 
-7. **Monitoramento e Controle em Tempo Real**: O dashboard do **Node-RED** permitiu o controle remoto dos dispositivos, exibindo dados operacionais como contagem de produtos, status dos motores e logs de eventos críticos. A interface possibilitou o controle direto dos dispositivos simulados, como iniciar/parar as esteiras e ajustar parâmetros operacionais.
+7. **Monitoramento e Controle em Tempo Real**: O dashboard do **Node-RED** permitiu o controle remoto dos dispositivos, exibindo dados operacionais como contagem de produtos, status dos motores e logs de eventos críticos. A interface possibilitou o controle direto dos dispositivos simulados, como iniciar/parar as esteiras e ajustar parâmetros operacionais. Mais detalhes podem ser encontrados na documentação do módulo utility [aqui](https://github.com/AlberiSantos/IoT-SmartFactory-DigitalTwins/blob/main/utility/README.md).
 
 Dashboard implementado utilizando o Node-RED:
 
 ![Dashboard Node-RED](images/dashboard_1.png)
 
-8. **Validação da Arquitetura**: Foram realizados testes de desempenho, incluindo a medição de **latência** e **throughput** para garantir a eficiência e confiabilidade da solução em um ambiente industrial simulado. As métricas coletadas foram essenciais para validar a comunicação entre dispositivos e nuvem.
+8. **Validação da Arquitetura**: Utilizando a ferramenta **Wireshark** foram realizados testes de desempenho, incluindo a medição de **latência** e **throughput** para garantir a eficiência e confiabilidade da solução em um ambiente industrial simulado. As capturas foram realizadas nos pontos indicados na imagem abaixo.
+
+Pontos de captura de comunicação com a ferramenta wireshark:
+
+![Wireshark Diagrama](images/wireshark_diagrama.png)
 
 ### Resultados
 Os testes demonstraram que a arquitetura oferece alta interoperabilidade entre diferentes protocolos de comunicação, além de permitir uma integração eficiente com plataformas de nuvem e gêmeos digitais. A solução foi capaz de mapear dinamicamente os dispositivos em tempo real e se ajustar automaticamente a mudanças no ambiente produtivo. A comunicação foi segura e a latência e throughput atenderam aos requisitos de um cenário de Indústria 4.0.
